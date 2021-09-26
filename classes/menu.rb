@@ -1,6 +1,12 @@
 require "tty-prompt"
+require "tty-progressbar"
+
+# Initialize gems
 
 prompt = TTY::Prompt.new
+bar = TTY::ProgressBar.new("Loading Tutorial [:bar]", total: 50)
+
+# Welcome the user
 
 puts "
 
@@ -23,10 +29,39 @@ puts "
 
 "
 
+# Prompt the user to start the tutorial 
+
 selected = prompt.select("Welcome to the programming tutorial, would you like to proceed?", %w(Start Exit))
 
+# Display a fake loading bar to commence tutorial/game
+
 if selected == "Start" 
-    puts "Tutorial commencing"
+    puts ""
+    puts "Tutorial commencing: "
+    50.times do
+        sleep(0.05)
+        bar.advance  # by default increases by 1
+      end
+      require_relative "../stages/stage1.rb"
+      
 else
-    puts "rip"
+
+    # Farewell the user if they decide to leave
+
+    puts "
+
+    ================================================================================
+    
+    .d8888b.   .d88888b.   .d88888b.  8888888b.         888888b. Y88b   d88P 8888888888 
+    d88P  Y88b d88P\" \"Y88b d88P\" \"Y88b 888  \"Y88b        888  \"88b Y88b d88P  888        
+    888    888 888     888 888     888 888    888        888  .88P  Y88o88P   888        
+    888        888     888 888     888 888    888        8888888K.   Y888P    8888888    
+    888  88888 888     888 888     888 888    888        888  \"Y88b   888     888        
+    888    888 888     888 888     888 888    888 888888 888    888   888     888        
+    Y88b  d88P Y88b. .d88P Y88b. .d88P 888  .d88P        888   d88P   888     888        
+     \"Y8888P88  \"Y88888P\"   \"Y88888P\"  8888888P\"         8888888P\"    888     8888888888
+
+     ================================================================================
+    
+    "
 end
