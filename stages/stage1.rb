@@ -19,6 +19,8 @@ dialogue.variable(user.name)
 
 dialogue.dataTypes(user)
 
-dialogue.logicOperators(user)
+dialogue.logicOperators
+
+dialogue.classes(user)
 
 

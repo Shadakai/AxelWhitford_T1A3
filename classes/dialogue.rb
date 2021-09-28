@@ -158,7 +158,9 @@ class Stage1_dialogue
         puts "Afraid_of_spiders = #{user.afraidOfSpiders}".colorize(:blue)
     end
 
-    def logicOperators(user)
+    #Handle the logic operator tutorial
+
+    def logicOperators
         prompt = TTY::Prompt.new
         bar = TTY::ProgressBar.new("Randomly Generating [:bar]", total: 50)
         sleep(1)
@@ -200,9 +202,38 @@ class Stage1_dialogue
         sleep(2)
     end
 
-    def objects(user)
-        puts
+    #Handle the classes tutorial and build the AI for stage 2
+
+    def classes(user, ai)
+        prompt = TTY::Prompt.new
+        puts "Introducing Classes!!"
+        sleep(2)
+        puts "Classes are a way of packaging all this functionality into one neat little package"
+        sleep(4)
+        puts "Let's create a basic AI that can play games with us"
+        sleep(2)
+        puts "first we create the class AI"
+        sleep(2)
+        puts "secondly we give it some properties such as name"
+        name = prompt.ask("What should we name her?".colorize(:green), default: ENV["User"])
+        ai.name = name
+        puts "oh #{name}, what a beautiful name!"
+        sleep(2)
+        puts "great now lets set some other functionality"
+        sleep(1)
+        puts "lets set the"
+        sleep(1)
+        puts "ability_to_play_games = true".colorize(:blue)
+        sleep(2)
+        puts "intelligence = 10".colorize(:blue)
+
 
     end
+
+end
+
+#Store and handle dialogue from the second stage of the application
+
+class Stage2_dialogue
 
 end
