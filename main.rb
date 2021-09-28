@@ -1,4 +1,4 @@
-# This is where i will run everything from 
+# This is where I will run everything from 
 
 require_relative "classes/menu.rb"
 

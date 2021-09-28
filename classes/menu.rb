@@ -42,6 +42,7 @@ if selected == "Start"
         sleep(0.05)
         bar.advance  # by default increases by 1
       end
+      #IDK why but if I required this at the top it would run first, this is the only way i found that would run it once the loading was done
       require_relative "../stages/stage1.rb"
       
 else
