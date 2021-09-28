@@ -14,3 +14,4 @@ numberGuesser = NumberGuesser.new
 
 dialogue.numberGuessingGame
 numberGuesser.numberGuessingGame
+dialogue.rockPaperScissors
