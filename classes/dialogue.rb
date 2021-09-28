@@ -156,10 +156,21 @@ class Stage1_dialogue
         sleep(2)
     end
 
-    def objects(user)
+    def logicOperators(user)
         prompt = TTY::Prompt.new
+        sleep(1)
+        puts "Great, now we know the basic's we can pretty much do anything"
+        sleep(2)
+        puts "Let's make things interesting! How about a game"
+        sleep(1)
+        puts "It'll be an easy number guessing game"
 
 
+
+    end
+
+    def objects(user)
+        
     end
 
 end
