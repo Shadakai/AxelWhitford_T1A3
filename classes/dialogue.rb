@@ -1,4 +1,5 @@
 require_relative "user.rb"
+require "tty-progressbar"
 require "tty-prompt"
 require "colorize"
 
@@ -84,26 +85,26 @@ class Stage1_dialogue
         user.age = prompt.ask("How old are you?".colorize(:green), convert: :int, default: ENV["User"])
         puts "Awesome so that would look like:"
         sleep(1)
-        puts "age = #{user.age}"
+        puts "age = #{user.age}".colorize(:blue)
         sleep(1)
         puts "Let's get some more data"
         sleep(1)
         user.favouriteColour = prompt.ask("What's your favourite colour?".colorize(:green), default: ENV["User"])
         puts "Awesome so that would look like:"
         sleep(1)
-        puts "favourite_colour = '#{user.favouriteColour}'"
+        puts "favourite_colour = '#{user.favouriteColour}'".colorize(:blue)
         sleep(2)
         puts "Now the reason favourite_color is in quotation marks, is because thats how we tell the computer,"
         sleep(2)
         puts "that it is a 'String' "
         sleep(1.5)
-        puts "A string can be any amount of characters wrapped in quotation marks"
+        puts "A String can be any amount of characters wrapped in quotation marks"
         sleep(1.5)
-        puts "'This is a String'"
+        puts "'This is a String'".colorize(:pink)
         sleep(1.5)
-        puts "'Th1s 1s 4ls0 4 5tring'"
+        puts "'Th1s 1s 4ls0 4 5tring'".colorize(:pink)
         sleep(1.5)
-        puts "This is also a String 123456 --==-- "
+        puts "'This is also a String 123456 --==-- '".colorize(:pink)
         sleep(1.5)
         puts "Another commonly used data type is an Integer"
         sleep(2.5)
@@ -113,13 +114,13 @@ class Stage1_dialogue
         sleep(2)
         puts "Aslong as the number isn't wrapped in quotation marks it is considered a Integer"
         sleep(2.5)
-        puts "24 is an Integer"
+        puts "24 is an Integer".colorize(:purple)
         sleep(1.5)
-        puts "'24' is a String"
+        puts "'24' is a String".colorize(:pink)
         sleep(1)
-        puts "-01283982 is an Integer"
+        puts "-01283982 is an Integer".colorize(:purple)
         sleep(1.5)
-        puts "'-2' is a String"
+        puts "'-2' is a String".colorize(:pink)
         sleep(1)
         puts "See the difference??"
         sleep(2.5)
@@ -129,13 +130,13 @@ class Stage1_dialogue
         sleep(2)
         puts "They are decimal place numbers"
         sleep(1.5)
-        puts "299.1 is a Float"
+        puts "299.1 is a Float".colorize(:orange)
         sleep(1)
-        puts "299 is an Integer"
+        puts "299 is an Integer".colorize(:purple)
         sleep(1.5)
-        puts "2.0 is a Float"
+        puts "2.0 is a Float".colorize(:orange)
         sleep(1)
-        puts "2 is an Integer"
+        puts "2 is an Integer".colorize(:purple)
         sleep(3.5)
         puts "They are similar but not the same"
         sleep(2.5)
@@ -152,25 +153,56 @@ class Stage1_dialogue
         end
 
         sleep(1)
-        puts "Awesome so you being afraid of spiders is #{afraid}"
+        puts "Awesome so that would look like"
         sleep(2)
+        puts "Afraid_of_spiders = #{user.afraidOfSpiders}".colorize(:blue)
     end
 
     def logicOperators(user)
         prompt = TTY::Prompt.new
+        bar = TTY::ProgressBar.new("Randomly Generating [:bar]", total: 50)
         sleep(1)
         puts "Great, now we know the basic's we can pretty much do anything"
         sleep(2)
         puts "Let's make things interesting! How about a game"
-        sleep(1)
+        sleep(2)
         puts "It'll be an easy number guessing game"
-
-
-
+        sleep(2)
+        puts "First I'll generate a number between 1 and 5, and store it in a variable"
+        sleep(2)
+        50.times do
+            sleep(0.03)
+            bar.advance  # by default increases by 1
+          end
+        puts "Great now!"
+        guess = prompt.slider("What's your guess".colorize(:green), min: 1, max: 5, step: 1)
+        puts "Your guess was #{guess} and the number was 4"
+        sleep(2)
+        puts "We know the answer but wouldn't it be great if we could get the computer to tell us?"
+        sleep(4)
+        puts "luckily we can with '==' "
+        sleep(2)
+        puts "The computer comes with a couple built in 'logic operators' "
+        sleep(3)
+        puts "We simple go '#{guess} == 4' and the computer will tell us if they are equal to eachother"
+        sleep(3)
+        puts "The answer is ofcourse is #{guess == 4}"
+        sleep(2)
+        puts "Another great logic operator is '!='. This will tell us if to values are NOT equal to eachother"
+        sleep(3)
+        puts "There are also < and > if we need to tell if two numbers or greater then or less then eachother"
+        sleep(4)
+        puts "Great so we've figured out variables and date types"
+        sleep(2)
+        puts "As well as how to compare those datat types"
+        sleep(2)
+        puts "Now wouldn't it be great if we had someone else to play with"
+        sleep(2)
     end
 
     def objects(user)
-        
+        puts
+
     end
 
 end
