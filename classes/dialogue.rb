@@ -10,7 +10,7 @@ class Stage1_dialogue
     # Handle the introduction of that app
 
     def intro
-        puts ""
+        puts "This is a secret line".colorize(:black)
         puts "Welcome to the Coding Tutorial"
         sleep(1)
         puts "I'll be your teacher today, my name is Axel"
@@ -41,11 +41,11 @@ class Stage1_dialogue
         puts "This allows us to use whats in the variable, without having to remember what's in it."
         sleep(1.5)
         puts "Say we wanted to figure out how many hours are in a week"
-        sleep(1.5)
+        sleep(2)
         puts "We can simple do: 7 x hours_in_a_day = 168"
         sleep(1.5)
         puts "Another reason variables are so helpful is because they are easy to change!"
-        sleep(2.5)
+        sleep(3)
         puts "Let's say that the hours in a day change"
         sleep(2)
         puts "I'll let you decide what they change to"
@@ -56,10 +56,10 @@ class Stage1_dialogue
         hours_in_a_day = prompt.ask("How many hours in a day now?".colorize(:green), convert: :int, default: ENV["User"], )
         puts "Awesome, so hours_in_a_day = #{hours_in_a_day}"
         sleep(2)
-        puts "So to find out hour many hours in a week we do 7 x hours_in_a_day = #{7 * hours_in_a_day}"
+        puts "So to find out how many hours in a week we do 7 x hours_in_a_day = #{7 * hours_in_a_day}"
         sleep(3)
-        puts "Notice how some the variable my_name and your_name had quotation marks around them"
-        sleep(1)
+        puts "Notice how the variables my_name and your_name had quotation marks around them"
+        sleep(2)
         puts "my_name = 'Axel' ".colorize(:blue)
         puts "your_name = '#{name}'".colorize(:blue)
         sleep(3)
@@ -100,11 +100,11 @@ class Stage1_dialogue
         sleep(1.5)
         puts "A String can be any amount of characters wrapped in quotation marks"
         sleep(1.5)
-        puts "'This is a String'".colorize(:pink)
+        puts "'This is a String'".colorize(:magenta)
         sleep(1.5)
-        puts "'Th1s 1s 4ls0 4 5tring'".colorize(:pink)
+        puts "'Th1s 1s 4ls0 4 5tring'".colorize(:magenta)
         sleep(1.5)
-        puts "'This is also a String 123456 --==-- '".colorize(:pink)
+        puts "'This is also a String 123456 --==-- '".colorize(:magenta)
         sleep(1.5)
         puts "Another commonly used data type is an Integer"
         sleep(2.5)
@@ -114,13 +114,13 @@ class Stage1_dialogue
         sleep(2)
         puts "Aslong as the number isn't wrapped in quotation marks it is considered a Integer"
         sleep(2.5)
-        puts "24 is an Integer".colorize(:purple)
+        puts "24 is an Integer".colorize(:cyan)
         sleep(1.5)
-        puts "'24' is a String".colorize(:pink)
+        puts "'24' is a String".colorize(:magenta)
         sleep(1)
-        puts "-01283982 is an Integer".colorize(:purple)
+        puts "-01283982 is an Integer".colorize(:cyan)
         sleep(1.5)
-        puts "'-2' is a String".colorize(:pink)
+        puts "'-2' is a String".colorize(:magenta)
         sleep(1)
         puts "See the difference??"
         sleep(2.5)
@@ -130,19 +130,19 @@ class Stage1_dialogue
         sleep(2)
         puts "They are decimal place numbers"
         sleep(1.5)
-        puts "299.1 is a Float".colorize(:orange)
+        puts "299.1 is a Float".colorize(:light_green)
         sleep(1)
-        puts "299 is an Integer".colorize(:purple)
+        puts "299 is an Integer".colorize(:cyan)
         sleep(1.5)
-        puts "2.0 is a Float".colorize(:orange)
+        puts "2.0 is a Float".colorize(:light_green)
         sleep(1)
-        puts "2 is an Integer".colorize(:purple)
+        puts "2 is an Integer".colorize(:cyan)
         sleep(3.5)
         puts "They are similar but not the same"
         sleep(2.5)
         puts "Another common Data type is Boolean"
         sleep(2)
-        puts "Boolean just means true ort false -  for example: "
+        puts "Boolean just means true or false -  for example: "
         sleep(1.5)
         afraid = prompt.select("You are afraid of spiders".colorize(:green), %w(True False))
 
@@ -176,7 +176,9 @@ class Stage1_dialogue
             sleep(0.03)
             bar.advance  # by default increases by 1
           end
+        sleep(1)
         puts "Great now!"
+        sleep(1)
         guess = prompt.slider("What's your guess".colorize(:green), min: 1, max: 5, step: 1)
         puts "Your guess was #{guess} and the number was 4"
         sleep(2)
@@ -188,7 +190,7 @@ class Stage1_dialogue
         sleep(3)
         puts "We simple go '#{guess} == 4' and the computer will tell us if they are equal to eachother"
         sleep(3)
-        puts "The answer is ofcourse is #{guess == 4}"
+        puts "The answer ofcourse is #{guess == 4}"
         sleep(2)
         puts "Another great logic operator is '!='. This will tell us if to values are NOT equal to eachother"
         sleep(3)
@@ -196,7 +198,7 @@ class Stage1_dialogue
         sleep(4)
         puts "Great so we've figured out variables and date types"
         sleep(2)
-        puts "As well as how to compare those datat types"
+        puts "As well as how to compare those data types"
         sleep(2)
         puts "Now wouldn't it be great if we had someone else to play with"
         sleep(2)
@@ -226,8 +228,11 @@ class Stage1_dialogue
         puts "ability_to_play_games = true".colorize(:blue)
         sleep(2)
         puts "intelligence = 10".colorize(:blue)
-
-
+        sleep(2)
+        puts "power = 'Off'".colorize(:blue)
+        sleep(2)
+        puts "Awesome that should be enough to get started!"
+        sleep(2)
     end
 
 end

@@ -31,6 +31,8 @@ puts "
 
 # Prompt the user to start the tutorial 
 
+
+
 selected = prompt.select("Welcome to the programming tutorial, would you like to proceed?", %w(Start Exit))
 
 # Display a fake loading bar to commence tutorial/game
