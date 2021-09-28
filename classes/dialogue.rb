@@ -153,8 +153,11 @@ class Stage1_dialogue
 
         sleep(1)
         puts "Awesome so you being afraid of spiders is #{afraid}"
-        sleep(5)
+        sleep(2)
+    end
 
+    def objects(user)
+        prompt = TTY::Prompt.new
 
 
     end

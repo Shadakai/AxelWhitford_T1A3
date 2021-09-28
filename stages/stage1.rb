@@ -19,4 +19,6 @@ dialogue.variable(user.name)
 
 dialogue.dataTypes(user)
 
+dialogue.objects(user)
+
 
