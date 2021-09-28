@@ -119,7 +119,7 @@ class Stage1_dialogue
         sleep(1.5)
         puts "'24' is a String".colorize(:magenta)
         sleep(1)
-        puts "-01283982 is an Integer".colorize(:cyan)
+        puts "-1283982 is an Integer".colorize(:cyan)
         sleep(1.5)
         puts "'-2' is a String".colorize(:magenta)
         sleep(1)
@@ -191,7 +191,7 @@ class Stage1_dialogue
         sleep(3)
         puts "We simple go '#{guess} == 4' and the computer will tell us if they are equal to eachother"
         sleep(3)
-        puts "The answer ofcourse is #{guess == 4}"
+        puts "The answer of course is #{guess == 4}"
         sleep(2)
         puts "Another great logic operator is '!='. This will tell us if to values are NOT equal to eachother"
         sleep(3)
@@ -215,7 +215,7 @@ class Stage1_dialogue
         sleep(4)
         puts "Let's create a basic AI that can play games with us"
         sleep(2)
-        puts "first we create the class AI"
+        puts "First we create the class AI"
         sleep(2)
         puts "secondly we give it some properties such as name"
         name = prompt.ask("What should we name her?".colorize(:green), default: ENV["User"])
@@ -243,6 +243,7 @@ end
 class Stage2_dialogue
 
     def numberGuessingGame 
+        numberguesser = NumberGuesser.new
         prompt = TTY::Prompt.new
         bar = TTY::ProgressBar.new("Initializing [:bar]", total: 50)
         puts "We will start off with an easy game"
@@ -252,6 +253,7 @@ class Stage2_dialogue
         puts "But this time we will put the AI in charge"
         sleep(2)
         puts "Initialize AI. power = on".colorize(:yellow)
+        sleep(2)
         50.times do
             sleep(0.02)
             bar.advance  # by default increases by 1
@@ -260,8 +262,8 @@ class Stage2_dialogue
         puts "AI INITIALIZED".colorize(:yellow)
         sleep(2)
         puts "Hello, How may I be of assisstance?".colorize(:magenta)
-        sleep(1)
-        puts "Start a game of 'Number guessed'"
+        sleep(2.5)
+        puts "Start a game of 'Number Guesser'"
         sleep(2)
         puts "Initializing Number Guesser".colorize(:magenta)
         sleep(2)
@@ -270,8 +272,6 @@ class Stage2_dialogue
             bar.advance  # by default increases by 1
           end
         sleep(1)
-        numberGuessingGame()
-
     end
 
 
