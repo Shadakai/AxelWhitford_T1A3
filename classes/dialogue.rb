@@ -1,4 +1,5 @@
 require_relative "user.rb"
+require_relative "../games/numberGuessing.rb"
 require "tty-progressbar"
 require "tty-prompt"
 require "colorize"
@@ -240,5 +241,39 @@ end
 #Store and handle dialogue from the second stage of the application
 
 class Stage2_dialogue
+
+    def numberGuessingGame 
+        prompt = TTY::Prompt.new
+        bar = TTY::ProgressBar.new("Initializing [:bar]", total: 50)
+        puts "We will start off with an easy game"
+        sleep(1)
+        puts "How about we do the number guessing game again"
+        sleep(2)
+        puts "But this time we will put the AI in charge"
+        sleep(2)
+        puts "Initialize AI. power = on".colorize(:yellow)
+        50.times do
+            sleep(0.02)
+            bar.advance  # by default increases by 1
+          end
+        sleep(1)
+        puts "AI INITIALIZED".colorize(:yellow)
+        sleep(2)
+        puts "Hello, How may I be of assisstance?".colorize(:magenta)
+        sleep(1)
+        puts "Start a game of 'Number guessed'"
+        sleep(2)
+        puts "Initializing Number Guesser".colorize(:magenta)
+        sleep(2)
+        50.times do
+            sleep(0.02)
+            bar.advance  # by default increases by 1
+          end
+        sleep(1)
+        numberGuessingGame()
+
+    end
+
+
 
 end
