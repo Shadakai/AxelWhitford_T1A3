@@ -303,6 +303,8 @@ class Stage2_dialogue
           end
         end
 
+        # Hangman Overview
+
         def hangman
             sleep(2)
             puts "That was better but I think a little more won't hurt"
@@ -329,10 +331,68 @@ class Stage2_dialogue
               end
         end
 
+        # stage 2 Conclusion dialogue
+
         def stage2Conclusion
-            
+            sleep(2)
+            puts "Awesome that was a lot better, but I think a little more will make her perfect"
+            sleep(1)
+            puts "Let's increase her intelligence"
+            sleep(2)
+            puts "ai.intelligence = 60"
+            bar = TTY::ProgressBar.new("Initializing [:bar]", total: 50)
+            # make the bar load slowly
+            30.times do
+                sleep(0.04)
+                bar.advance  # by default increases by 1
+             end
+             10.times do
+                sleep(0.5)
+                bar.advance  # by default increases by 1
+             end
+             3.times do
+                sleep(1)
+                bar.advance  # by default increases by 1
+             end
+             puts ""
+
+             msg = 'Error!'.colorize(:red)
+             10.times do
+             puts "\r#{ msg }"
+             sleep 0.1
+             puts "\r#{ ' ' * msg.size }" # Send return and however many spaces are needed.
+             sleep 0.1
+             end
+
+             i = 60
+             while i < 900
+                puts "ai.intelligence = #{i}".colorize(:red)
+                sleep(0.1)
+                i += 50
+             end
+             smart = TTY::ProgressBar.new("Initializing [:bar]", total: 100)
+             100.times do
+                sleep(0.01)
+                smart.advance  # by default increases by 1
+             end
+             sleep(0.5)
+             30.times do
+                puts "1010101010000101010100101010101111110101010010001101000101010101010101010101010101001010101010101010101010101010101010101010101010101010101001010101010101010010101".colorize(:red)
+                sleep(0.05)
+                puts "1011110101001010101010101010110000100101010101011101010010100101010110100011010101010101010101010010110101100110101010101010101001010110101010101011010001110111100".colorize(:red)
+                sleep(0.05)
+                puts "1011110101001010101111100111110000100101010101011101010010100101010110100011010100010101010111100101101010001010100011111101100101010000101010110110101101011110101".colorize(:red)
+                sleep(0.05)
+            end
+
+            30.times do
+                puts ""
+            end
+
         end
 
+end
 
+class Stage3_dialogue
 
 end
