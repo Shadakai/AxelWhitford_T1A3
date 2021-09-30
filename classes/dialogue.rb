@@ -242,6 +242,8 @@ end
 
 class Stage2_dialogue
 
+    # number guessing game dialogue
+
     def numberGuessingGame 
         prompt = TTY::Prompt.new
         bar = TTY::ProgressBar.new("Initializing [:bar]", total: 50)
@@ -273,6 +275,8 @@ class Stage2_dialogue
         sleep(1)
     end
 
+    # rock paper scissors dialogue
+
     def rockPaperScissors
         sleep(2)
         puts "Well that was a bit easy"
@@ -296,6 +300,31 @@ class Stage2_dialogue
             sleep(0.02)
             bar.advance  # by default increases by 1
           end
+        end
+
+        def hangman
+            sleep(2)
+            puts "That was better but I think a little more won't hurt"
+            sleep(1)
+            puts "Let's increase her intelligence"
+            sleep(2)
+            puts "ai.intelligence = 50"
+            bar = TTY::ProgressBar.new("Initializing [:bar]", total: 50)
+            50.times do
+                sleep(0.02)
+                bar.advance  # by default increases by 1
+             end
+            sleep(1)
+            puts "Intelligence now equals 50".colorize(:magenta)
+            sleep(2)
+            puts "Great, now lets test it with a game of Hangman!"
+            sleep(2)
+            puts "AI initialize a game of Hangman."
+            sleep(1)
+            50.times do
+                sleep(0.02)
+                bar.advance  # by default increases by 1
+              end
         end
 
 

@@ -6,8 +6,12 @@ class RockPaperScissors
 
     def rockPaperScissors
 
+        # initialze variables
+
         numberOfTimesPlayed = 0
         donePlaying = false
+
+        # keep looping until the player is done playing
 
         while donePlaying == false
 
@@ -36,15 +40,22 @@ class RockPaperScissors
 
         """
 
+        # show the player the choices
+
         choices = {Rock: 1, Paper: 2, Scissors: 3}
         choice = prompt.select("What's your choice?".colorize(:magenta), choices)
         random = rand(3) + 1
+
+        # Show computer making their choice
 
         50.times do
             sleep(0.05)
             bar.advance  # by default increases by 1
             end
             sleep(1)
+
+            # display text based on what they chose
+
         if choice == 1
             puts "Congratulations, You chose Rock and I chose Scissors, you win!".colorize(:magenta)
         elsif choice == 2
@@ -53,6 +64,9 @@ class RockPaperScissors
             puts "Congratulations, You chose Scissors and I chose Paper, you win!".colorize(:magenta)
         end
         sleep(2)
+
+        # prompt them to play again
+
         puts "Would you like to play again?".colorize(:magenta)
         play = prompt.yes?("Play Again?".colorize(:magenta))
         if play == true
