@@ -296,9 +296,10 @@ class Stage2_dialogue
         sleep(2)
         puts "AI initialize a game of Rock, Paper, Scissors"
         sleep(1)
+        rps = TTY::ProgressBar.new("Initializing [:bar]", total: 50)
         50.times do
             sleep(0.02)
-            bar.advance  # by default increases by 1
+            rps.advance  # by default increases by 1
           end
         end
 
@@ -321,10 +322,15 @@ class Stage2_dialogue
             sleep(2)
             puts "AI initialize a game of Hangman."
             sleep(1)
+            hangman = TTY::ProgressBar.new("Initializing [:bar]", total: 50)
             50.times do
                 sleep(0.02)
-                bar.advance  # by default increases by 1
+                hangman.advance  # by default increases by 1
               end
+        end
+
+        def stage2Conclusion
+            
         end
 
 

@@ -54,26 +54,26 @@ class Hangman
         if @lives > 0 
             guess = gets.chomp
             # exit game if typed otherwise
-            if guess == 'exit'
-                puts "Thank you for playing!"
-            elsif
-            puts "You guessed #{guess}"
-
+            puts "You guessed #{guess}".colorize(:magenta)
             good_guess = @word.include? guess
 
-            if good_guess 
-                puts "Great guess!"
-                teaser guess
-                # split the word and check if they are equal
-                if @word == @word_teaser.split.join
-                    puts "Congratualations... you have won!"
+            if guess == 'exit'
+                puts "Thank you for playing!".colorize(:magenta)
+            elsif
+                if good_guess 
+                    puts "Great guess!".colorize(:magenta)
+                    teaser guess
+                    # split the word and check if they are equal
+                    if @word == @word_teaser.split.join
+                        puts "Congratualations... you have won!".colorize(:magenta)
+                    else
+                    make_guess
+                    end
                 else
-                make_guess
+                    @lives -= 1
+                    puts "Sorry, you have #{@lives} lives remaining...Try again"
+                    make_guess
                 end
-            else
-                @lives -= 1
-                puts "Sorry, you have #{@lives} lives remaining...Try again"
-                make_guess
             end
         else 
             # otherwise
@@ -81,17 +81,18 @@ class Hangman
         end
     end
     
-        
-    end
 
     # Begin the game
 
     def begin
-        puts "Welcome to Hangman"
-        puts "To exit the game at any point please type 'exit '"
-        puts "your word is:"
+        puts "Welcome to Hangman".colorize(:magenta)
+        sleep(1)
+        puts "To exit the game at any point please type 'exit'".colorize(:magenta)
+        sleep(2)
+        puts "your word is:".colorize(:magenta)
         teaser
-        puts "Please enter a letter:"
+        sleep(1)
+        puts "Please enter a letter:".colorize(:magenta)
         make_guess
     end
 

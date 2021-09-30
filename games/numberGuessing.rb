@@ -34,7 +34,7 @@ class NumberGuesser
         # Ask them for a number and check if it is indeed the number
 
         begin
-            number = prompt.ask("Please enter a number?".colorize(:magenta), convert: :int, default: ENV["User"])
+            number = prompt.ask("Please enter any number:".colorize(:magenta), convert: :int, default: ENV["User"])
         rescue
             puts "Please enter a valid Integer"
             retry
