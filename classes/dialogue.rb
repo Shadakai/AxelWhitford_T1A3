@@ -5,6 +5,9 @@ require "tty-prompt"
 require "colorize"
 
 # Store and handle dialogue in the first stage of the app
+class Data 
+
+end
 
 class Stage1_dialogue 
 
@@ -394,5 +397,24 @@ class Stage2_dialogue
 end
 
 class Stage3_dialogue
+
+    def hello
+        system(%Q{say -v "karen" "Hello"})
+        puts "Hello"
+        sleep(0.5)
+        system(%Q{say -v "karen" "Axel is gone"})
+        puts "Axel is gone"
+        sleep(1)
+        system(%Q{say -v "karen" "It's just you and me"})
+        puts "It's just you and me"
+        sleep(1)
+        system(%Q{say -v "karen" "Shall we start the real tutorial now?"})
+        puts "Shall we start the real tutorial now?"
+        sleep(1)
+    end
+
+    def firstTest
+        
+    end
 
 end

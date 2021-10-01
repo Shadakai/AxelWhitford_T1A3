@@ -1,5 +1,3 @@
-require "tty-prompt"
-require "colorize"
 require_relative "../classes/user.rb"
 require_relative "../classes/ai.rb"
 require_relative "../classes/dialogue.rb"
@@ -22,6 +20,12 @@ dialogue.rockPaperScissors
 rockPaperScissors.rockPaperScissors
 dialogue.hangman
 hangman.begin
+dialogue.stage2Conclusion
+
+#load and send too stage3
+
+require_relative "stage3.rb"
+load("stage3.rb")
 
 
 

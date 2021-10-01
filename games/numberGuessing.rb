@@ -14,8 +14,6 @@ class NumberGuesser
         numberOfTimesPlayed = 0
         donePlaying = false
 
-        puts "="*50
-
         # Loop through the game until the player decides to stop
 
         while donePlaying == false
