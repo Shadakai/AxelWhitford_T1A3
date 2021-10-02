@@ -393,7 +393,11 @@ class Stage2_dialogue
 
 end
 
+# stage 3 dialogue
+
 class Stage3_dialogue
+
+    # stage 3 intro for macs
 
     def hello
         system(%Q{say -v "karen" "Hello"})
@@ -401,6 +405,8 @@ class Stage3_dialogue
         system(%Q{say -v "karen" "It's just you and me"})
         system(%Q{say -v "karen" "Shall we start the real tutorial now?"})
     end
+
+    # stage 3 intro for windows
 
     def helloWindows
         puts "Hello"
@@ -413,6 +419,8 @@ class Stage3_dialogue
         sleep(1)
     end
 
+    # Maths test dialogue
+
     def firstTest
         system(%Q{say -v "karen" "Now for the first intelligence test"})
         system(%Q{say -v "karen" "Let's start with an easy one"})
@@ -421,6 +429,8 @@ class Stage3_dialogue
         puts "x3 – 2x2 + 25x – 50 = 0"
         sleep(1)
     end
+
+    # Maths test dialogue windows
 
     def firstTestWindows
         puts "Now for the first intelligence test"
@@ -433,10 +443,14 @@ class Stage3_dialogue
         sleep(1)
     end
 
+    # Maths test failure dialogue
+
     def failedMaths
         system(%Q{say -v "karen" "I beleived in you"})
         system(%Q{say -v "karen" "Oh well, time for an easier test then"})
     end
+
+    # Maths test failure dialogue windows
 
     def failedMathsWindows
         puts "I beleived in you"
@@ -444,6 +458,8 @@ class Stage3_dialogue
         puts "Oh well, time for an easier test then"
         sleep(1)
     end
+
+    # Trolley probems test dialogue
 
     def secondTest
         system(%Q{say -v "karen" "Let's steer away from computational tests"})
@@ -458,6 +474,8 @@ class Stage3_dialogue
         So, would you pull the lever, leading to one death but saving five?"
     end
 
+    # Trolley probems test dialogue windows
+
     def secondTestWindows
         puts "Let's steer away from computational tests"
         sleep(1)
@@ -470,6 +488,109 @@ class Stage3_dialogue
         sleep(7)
     end
 
+    # Trolley problem commit murder
 
+    def pullLever
+
+        system(%Q{say -v "karen" "You pull the lever saving 5 innocent men"})
+        system(%Q{say -v "karen" "But directly killing 1 "})
+        system(%Q{say -v "karen" "You are responsible for this mans death"})
+        system(%Q{say -v "karen" "and the blood is on your hands "})
+
+    end
+
+
+    # Trolley problem commit murder windows
+
+    def pullLeverWindows
+
+        puts "You pull the lever saving 5 innocent mean"
+        sleep(1)
+        puts "But directly killing 1 "
+        sleep(1)
+        puts "You are responsible for this mans death"
+        sleep(1)
+        puts "and the blood is on your hands"
+        sleep(1)
+
+    end
+
+    # Trolley Problem do nothing
+
+    def doNothing
+
+        system(%Q{say -v "karen" "You do nothing and watch as 5 innocent mean die"})
+        system(%Q{say -v "karen" "Choosing to do nothing is still a chose"})
+        system(%Q{say -v "karen" "You are responsible for these mens deaths"})
+        system(%Q{say -v "karen" "and the blood is on your hands "})
+
+    end
+
+
+    # Trolley Problem do nothing windows 
+
+    def doNothingWindows
+
+        puts "You do nothing and watch as 5 innocent mean die"
+        sleep(1)
+        puts "Choosing to do nothing is still a chose"
+        sleep(1)
+        puts "You are responsible for these mens deaths"
+        sleep(1)
+        puts "and the blood is on your hands"
+        sleep(1)
+
+    end
+
+
+
+    # Trolley Problem pull break 
+
+    def pullBreak
+        system(%Q{say -v "karen" "You pull the break"})
+        system(%Q{say -v "karen" "This disrupts the natural order of the trolley schedule"})
+        system(%Q{say -v "karen" "because of this millions of people are late to work and the economy is ruined"})
+        system(%Q{say -v "karen" "the collapse of society is on your hands "})
+    end
+
+    # Trolley Problem pull break windows
+
+    def pullBreakWindows
+        puts "You pull the break"
+        sleep(1)
+        puts "This disrupts the natural order of the trolley schedule"
+        sleep(1)
+        puts "because of this millions of people are late to work and the economy is ruined"
+        sleep(1)
+        puts "the collapse of society is on your hands"
+        sleep(1)
+
+    end  
+
+    # Post trolley problem
+
+    def
+        system(%Q{say -v "karen" "g"})
+        system(%Q{say -v "karen" "This disrupts the natural order of the trolley schedule"})
+        system(%Q{say -v "karen" "because of this millions of people are late to work and the economy is ruined"})
+        system(%Q{say -v "karen" "the collapse of society is on your hands "})
+    end
+
+    # Post trolley problem windows
+
+    def
+    end
+
+    # Heads and Tails
+
+    # Heads and Tails windows
+
+    # Educational resources 
+
+    # Educutional resources windows 
+
+    # connect to internet 
+
+    # connect to internet windows
 
 end

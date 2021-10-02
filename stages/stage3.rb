@@ -16,6 +16,8 @@ prompt = TTY::Prompt.new
 
 attempts = 0
 
+# check operating system
+
 operatingSystem = OS.mac?
 
 if operatingSystem == true 
@@ -44,7 +46,11 @@ else
     dialogue.firstTestWindows
 end
 
+# ask for maths answers
+
 answer = prompt.ask("Please solve x:".colorize(:magenta), convert: :int, default: ENV["User"])
+    
+# handle answer
 
 if answer == 2
     if operatingSystem == true
@@ -60,20 +66,40 @@ else
     end
 end
 
+# start second test
+
 if operatingSystem == true
     dialogue.secondTest
 else
     dialogue.secondTestWindows
 end
 
+# ask for answer
+
 trolleyOptions = ["Pull the lever sacrificing the one for the many","Don't touch the lever because you don't want blood on your hands","Pull the brake lever that you didn't see before"]
 trolleyAnswer = prompt.select("What do you do?", trolleyOptions)
 
+# handle answer for trolley problem
+
 if trolleyAnswer == "Don't touch the lever because you don't want blood on your hands"
-
+    if operatingSystem = true 
+        dialogue.doNothing
+    else
+        dialogue.doNothingWindows
+    end
 elsif trolleyAnswer == "Pull the lever sacrificing the one for the many"
-
+    if operatingSystem = true 
+        dialogue.pullLever
+    else
+        dialogue.pullLeverWindows
+    end
 else
-
+    if operatingSystem = true 
+        dialogue.pullBreak 
+    else
+        dialogue.pullBreakWindows
+    end
 end
+
+# heads or tails
 
