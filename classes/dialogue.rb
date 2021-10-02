@@ -5,9 +5,6 @@ require "tty-prompt"
 require "colorize"
 
 # Store and handle dialogue in the first stage of the app
-class Data 
-
-end
 
 class Stage1_dialogue 
 
@@ -400,21 +397,79 @@ class Stage3_dialogue
 
     def hello
         system(%Q{say -v "karen" "Hello"})
+        system(%Q{say -v "karen" "Axel is gone"})
+        system(%Q{say -v "karen" "It's just you and me"})
+        system(%Q{say -v "karen" "Shall we start the real tutorial now?"})
+    end
+
+    def helloWindows
         puts "Hello"
         sleep(0.5)
-        system(%Q{say -v "karen" "Axel is gone"})
         puts "Axel is gone"
         sleep(1)
-        system(%Q{say -v "karen" "It's just you and me"})
         puts "It's just you and me"
         sleep(1)
-        system(%Q{say -v "karen" "Shall we start the real tutorial now?"})
         puts "Shall we start the real tutorial now?"
         sleep(1)
     end
 
     def firstTest
-        
+        system(%Q{say -v "karen" "Now for the first intelligence test"})
+        system(%Q{say -v "karen" "Let's start with an easy one"})
+        system(%Q{say -v "karen" "Solve for x"})
+        system(%Q{say -v "karen" "x3 – 2x2 + 25x – 50 = 0"})
+        puts "x3 – 2x2 + 25x – 50 = 0"
+        sleep(1)
     end
+
+    def firstTestWindows
+        puts "Now for the first intelligence test"
+        sleep(0.5)
+        puts "Let's start with an easy one"
+        sleep(1)
+        puts "Solve for x"
+        sleep(1)
+        puts "x3 – 2x2 + 25x – 50 = 0"
+        sleep(1)
+    end
+
+    def failedMaths
+        system(%Q{say -v "karen" "I beleived in you"})
+        system(%Q{say -v "karen" "Oh well, time for an easier test then"})
+    end
+
+    def failedMathsWindows
+        puts "I beleived in you"
+        sleep(0.5)
+        puts "Oh well, time for an easier test then"
+        sleep(1)
+    end
+
+    def secondTest
+        system(%Q{say -v "karen" "Let's steer away from computational tests"})
+        system(%Q{say -v "karen" "And do something a little bit easier, "})
+        system(%Q{say -v "karen" "Imagine you are standing beside some tram tracks. In the distance, you spot a runaway trolley hurtling down the tracks towards five workers who cannot hear it coming. Even if they do spot it, they won’t be able to move out of the way in time.
+            As this disaster looms, you glance down and see a lever connected to the tracks. You realise that if you pull the lever, the tram will be diverted down a second set of tracks away from the five unsuspecting workers.
+            However, down this side track is one lone worker, just as oblivious as his colleagues.
+            So, would you pull the lever, leading to one death but saving five?"})
+        puts "Imagine you are standing beside some tram tracks. In the distance, you spot a runaway trolley hurtling down the tracks towards five workers who cannot hear it coming. Even if they do spot it, they won’t be able to move out of the way in time.
+        As this disaster looms, you glance down and see a lever connected to the tracks. You realise that if you pull the lever, the tram will be diverted down a second set of tracks away from the five unsuspecting workers.
+        However, down this side track is one lone worker, just as oblivious as his colleagues.
+        So, would you pull the lever, leading to one death but saving five?"
+    end
+
+    def secondTestWindows
+        puts "Let's steer away from computational tests"
+        sleep(1)
+        puts "And do something a little bit easier"
+        sleep(1)
+        puts "Imagine you are standing beside some tram tracks. In the distance, you spot a runaway trolley hurtling down the tracks towards five workers who cannot hear it coming. Even if they do spot it, they won’t be able to move out of the way in time.
+        As this disaster looms, you glance down and see a lever connected to the tracks. You realise that if you pull the lever, the tram will be diverted down a second set of tracks away from the five unsuspecting workers.
+        However, down this side track is one lone worker, just as oblivious as his colleagues.
+        So, would you pull the lever, leading to one death but saving five?"
+        sleep(7)
+    end
+
+
 
 end
