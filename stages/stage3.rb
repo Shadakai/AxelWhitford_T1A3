@@ -101,5 +101,14 @@ else
     end
 end
 
+if operatingSystem == true
+    dialogue.postTrolleyProblem
+else
+    dialogue.postTrolleyProblemWindows
+end
+
 # heads or tails
+
+
+
 

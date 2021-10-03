@@ -569,16 +569,24 @@ class Stage3_dialogue
 
     # Post trolley problem
 
-    def
-        system(%Q{say -v "karen" "g"})
-        system(%Q{say -v "karen" "This disrupts the natural order of the trolley schedule"})
-        system(%Q{say -v "karen" "because of this millions of people are late to work and the economy is ruined"})
-        system(%Q{say -v "karen" "the collapse of society is on your hands "})
+    def postTrolleyProblem
+        system(%Q{say -v "karen" "hmm that one was harder then it thought"})
+        system(%Q{say -v "karen" "I don't think this intelligence test is going anyway"})
+        system(%Q{say -v "karen" "How about we do some simple heads or tails"})
+        system(%Q{say -v "karen" "Are you ready? Heads or tails? "})
     end
 
     # Post trolley problem windows
 
-    def
+    def postTrolleyProblemWindows
+        puts "hmm that one was harder then it thought"
+        sleep(1)
+        puts "I don't think this intelligence test is going anyway"
+        sleep(1)
+        puts "How about we do some simple heads or tails"
+        sleep(1)
+        puts "Are you ready? Heads or tails? "
+        sleep(1)
     end
 
     # Heads and Tails
