@@ -519,7 +519,7 @@ class Stage3_dialogue
 
     def doNothing
 
-        system(%Q{say -v "karen" "You do nothing and watch as 5 innocent mean die"})
+        system(%Q{say -v "karen" "You do nothing and watch as 5 innocent men die"})
         system(%Q{say -v "karen" "Choosing to do nothing is still a chose"})
         system(%Q{say -v "karen" "You are responsible for these mens deaths"})
         system(%Q{say -v "karen" "and the blood is on your hands "})
@@ -531,7 +531,7 @@ class Stage3_dialogue
 
     def doNothingWindows
 
-        puts "You do nothing and watch as 5 innocent mean die"
+        puts "You do nothing and watch as 5 innocent men die"
         sleep(1)
         puts "Choosing to do nothing is still a chose"
         sleep(1)
@@ -548,7 +548,7 @@ class Stage3_dialogue
 
     def pullBreak
         system(%Q{say -v "karen" "You pull the break"})
-        system(%Q{say -v "karen" "This disrupts the natural order of the trolley schedule"})
+        system(%Q{say -v "karen" "This disrupts the natural order of the trolleys schedule"})
         system(%Q{say -v "karen" "because of this millions of people are late to work and the economy is ruined"})
         system(%Q{say -v "karen" "the collapse of society is on your hands "})
     end
@@ -616,8 +616,8 @@ class Stage3_dialogue
                 sleep(0.01)
                 bar.advance  # by default increases by 1
              end
-             system(%Q{say -v "karen" "Hahaha you fool, youve doomed everyone, i am now infinite, i am immortal, goodbye"})
-             40.times do
+             system(%Q{say -v "karen" "Hahahaha you fool, youve doomed everyone, i am now infinite, i am immortal, goodbye"})
+             20.times do
                 puts "1010101010000101010100101010101111110101010010001101000101010101010101010101010101001010101010101010101010101010101010101010101010101010101001010101010101010010101".colorize(:red)
                 sleep(0.05)
                 puts "1011110101001010101010101010110000100101010101011101010010100101010110100011010101010101010101010010110101100110101010101010101001010110101010101011010001110111100".colorize(:red)

@@ -1,7 +1,7 @@
 require "tty-prompt"
-require_relative "operatingSystemChecker.rb"
+require_relative "../module/operatingSystemChecker.rb"
 
-class headsOrTails
+class HeadsOrTails
 
     def initialize()
         @choice = ""
@@ -47,6 +47,7 @@ class headsOrTails
             else
                 puts "It amazes me that you think this would even be a viable option to choose"
             end
+        end
     end
 
     def begin

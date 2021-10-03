@@ -83,19 +83,19 @@ trolleyAnswer = prompt.select("What do you do?", trolleyOptions)
 # handle answer for trolley problem
 
 if trolleyAnswer == "Don't touch the lever because you don't want blood on your hands"
-    if operatingSystem = true 
+    if operatingSystem == true 
         dialogue.doNothing
     else
         dialogue.doNothingWindows
     end
 elsif trolleyAnswer == "Pull the lever sacrificing the one for the many"
-    if operatingSystem = true 
+    if operatingSystem == true 
         dialogue.pullLever
     else
         dialogue.pullLeverWindows
     end
 else
-    if operatingSystem = true 
+    if operatingSystem == true 
         dialogue.pullBreak 
     else
         dialogue.pullBreakWindows
@@ -113,6 +113,10 @@ end
 game = HeadsOrTails.new
 game.begin
     
-
+if operatingSystem == true
+    dialogue.educate
+else
+    dialogue.educateWindows
+end
 
 
