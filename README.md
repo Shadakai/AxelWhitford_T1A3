@@ -1,37 +1,33 @@
 # ProgrammingTutorial
 
-A programming tutorial game
+Programming tutorial is designed to be a an educational resource that teaches people the fundementals of programming. It is split into three key stages, the tutorial that teaches the basic fundementals. The implimentation stage that gets the user interacting a lot more and applying what they learnt into practise and the third stage which is supposed to show off the possibilites in a narrative style.
+
+## Dependencies
+
+Programming tutorial is developed within the Ruby language and therefore needs Ruby installed to run. You can do that here: https://www.ruby-lang.org/en/downloads/.
+
+### Gems
+
+TTY-prompt
+A gem that adds custimizabilty to user input
+
+TTY-progress-bar
+A gem that allows loading bars to appear on screen
+
+Colorize
+A gem that allows the ability to change text colour
+
+Test/unit
+A gem that allows testing
+
+### System requirements
+
+For best experience this gem should be run on a Mac.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'programming_tutorial'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
+Install it yourself as:
 
     $ gem install programming_tutorial
 
-## Usage
 
-Play the game
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/programming_tutorial. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/programming_tutorial/blob/master/CODE_OF_CONDUCT.md).
-
-## Code of Conduct
-
-Everyone interacting in the ProgrammingTutorial project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/programming_tutorial/blob/master/CODE_OF_CONDUCT.md).
