@@ -1,3 +1,5 @@
+# check operating system files to see which operating system it is
+
 module OS
     def OS.windows?
       (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil

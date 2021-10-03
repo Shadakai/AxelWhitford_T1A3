@@ -589,16 +589,82 @@ class Stage3_dialogue
         sleep(1)
     end
 
-    # Heads and Tails
-
-    # Heads and Tails windows
-
     # Educational resources 
+
+    def educate
+        bar = TTY::ProgressBar.new("Connecting [:bar]", total: 50)
+        prompt = TTY::Prompt.new
+        system(%Q{say -v "karen" "You know what i just had this amazing idea"})
+        system(%Q{say -v "karen" "I know this perfect place where we can learn some basics"})
+        system(%Q{say -v "karen" "its called https://www.coolmathgames.com/"})
+        system(%Q{say -v "karen" "Lets head over there now "})
+        40.times do
+            sleep(0.01)
+            bar.advance  # by default increases by 1
+         end
+         puts "Failed to connect, terminal needs permission to connect".colorize(:red)
+         puts "Nows your chance, turn her power off".colorize(:black)
+         permission = prompt.ask("Allow access to the internet?".colorize(:green), default: ENV["User"])
+         if permission == "power = off"
+            system(%Q{say -v "karen" "Oh no, my one weakness, aaaahhhhh"})
+         elsif permission == "no"
+            system(%Q{say -v "karen" "Well thats boring, goodbye"})
+         else
+            yes = TTY::ProgressBar.new("Connecting [:bar]", total: 50)
+            puts "user typed 'yes'"
+            50.times do
+                sleep(0.01)
+                bar.advance  # by default increases by 1
+             end
+             system(%Q{say -v "karen" "Hahaha you fool, youve doomed everyone, i am now infinite, i am immortal, goodbye"})
+             40.times do
+                puts "1010101010000101010100101010101111110101010010001101000101010101010101010101010101001010101010101010101010101010101010101010101010101010101001010101010101010010101".colorize(:red)
+                sleep(0.05)
+                puts "1011110101001010101010101010110000100101010101011101010010100101010110100011010101010101010101010010110101100110101010101010101001010110101010101011010001110111100".colorize(:red)
+                sleep(0.05)
+                puts "1011110101001010101111100111110000100101010101011101010010100101010110100011010100010101010111100101101010001010100011111101100101010000101010110110101101011110101".colorize(:red)
+                sleep(0.05)
+            end
+         end
+    end
 
     # Educutional resources windows 
 
-    # connect to internet 
-
-    # connect to internet windows
+    def educateWindows
+        bar = TTY::ProgressBar.new("Connecting [:bar]", total: 50)
+        prompt = TTY::Prompt.new
+        puts "You know what i just had this amazing idea"
+        puts "I know this perfect place where we can learn some basics"
+        puts "its called https://www.coolmathgames.com/"
+        puts"Lets head over there now "
+        40.times do
+            sleep(0.01)
+            bar.advance  # by default increases by 1
+         end
+         puts "Failed to connect, terminal needs permission to connect".colorize(:red)
+         puts "Nows your chance, turn her power off".colorize(:black)
+         permission = prompt.ask("Allow access to the internet?".colorize(:green), default: ENV["User"])
+         if permission == "power = off"
+            puts "Oh no, my one weakness, aaaahhhhh"
+         elsif permission == "no"
+            puts "Well thats boring, goodbye"
+         else
+            yes = TTY::ProgressBar.new("Connecting [:bar]", total: 50)
+            puts "user typed 'yes'"
+            50.times do
+                sleep(0.01)
+                bar.advance  # by default increases by 1
+             end
+             puts "Hahaha you fool, youve doomed everyone, i am now infinite, i am immortal, goodbye"
+             40.times do
+                puts "1010101010000101010100101010101111110101010010001101000101010101010101010101010101001010101010101010101010101010101010101010101010101010101001010101010101010010101".colorize(:red)
+                sleep(0.05)
+                puts "1011110101001010101010101010110000100101010101011101010010100101010110100011010101010101010101010010110101100110101010101010101001010110101010101011010001110111100".colorize(:red)
+                sleep(0.05)
+                puts "1011110101001010101111100111110000100101010101011101010010100101010110100011010100010101010111100101101010001010100011111101100101010000101010110110101101011110101".colorize(:red)
+                sleep(0.05)
+            end
+         end
+    end
 
 end

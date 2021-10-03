@@ -1,8 +1,9 @@
 require "tty-prompt"
 require "colorize"
-require_relative "../classes/dialogue.rb"
 require_relative "../module/operatingSystemChecker.rb"
+require_relative "../classes/dialogue.rb"
 require_relative "../classes/escapeDialogue.rb"
+require_relative "../games/headsOrTails.rb"
 
 # initialize 
 
@@ -109,6 +110,9 @@ end
 
 # heads or tails
 
+game = HeadsOrTails.new
+game.begin
+    
 
 
 
