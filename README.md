@@ -26,8 +26,13 @@ For best experience this gem should be run on a Mac.
 
 ## Installation
 
-Install it yourself as:
+How to install this application: 
 
-    $ gem install programming_tutorial
+1. Download the AxelWhitford_T1A3 folder and unzip the contents.
+
+2. Open up the terminal and change directory into the folder 
+    Example : cd downloads/axelWhitford_T1A3
+
+3. Once in the folder run teh command 'run_tutorial.sh'
 
 
